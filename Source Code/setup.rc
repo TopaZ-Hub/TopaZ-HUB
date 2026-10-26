@@ -1,0 +1,35 @@
+#include <winver.h>
+#include "resource.h"
+#ifdef HUB_SETUP
+1 ICON "../../branding/logo_hub.ico"
+IDR_LOGO RCDATA "../../branding/logo_hub_256.png"
+#else
+1 ICON "../../branding/logo_editing.ico"
+IDR_LOGO RCDATA "../../branding/logo_editing_256.png"
+#endif
+1 24 "../common/app.manifest"
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 26,1,0,0
+PRODUCTVERSION 26,1,0,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "041504B0"
+    BEGIN
+      VALUE "CompanyName", "TopaZ"
+      VALUE "FileDescription", "Instalator TopaZ"
+      VALUE "FileVersion", "26.1.0"
+#ifdef HUB_SETUP
+      VALUE "ProductName", "TopaZ Creative Hub"
+#else
+      VALUE "ProductName", "TopaZ Editing Pro 26"
+#endif
+      VALUE "ProductVersion", "26.1.0"
+      VALUE "LegalCopyright", "(c) 2026 TopaZ"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0415, 1200
+  END
+END

@@ -1,0 +1,9 @@
+{
+  "name": "topaz-editing-pro",
+  "productName": "TopaZ Editing Pro 26",
+  "version": "26.1.0",
+  "description": "TopaZ Editing Pro 26 - nieliniowy edytor wideo",
+  "main": "main.js",
+  "author": "TopaZ",
+  "license": "Proprietary"
+}

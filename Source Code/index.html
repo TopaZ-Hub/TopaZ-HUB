@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' tz: blob: data:; img-src 'self' tz: blob: data:; media-src 'self' tz: blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' tz: blob: data:; font-src 'self' data:">
+<title>TopaZ Editing Pro 26</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-select" viewBox="0 0 24 24"><path d="M6 3l13 9.5-6.2 1.2 3.6 6.6-2.4 1.3-3.6-6.6L6 19z" fill="currentColor"/></symbol>
+  <symbol id="i-trackfwd" viewBox="0 0 24 24"><path d="M4 4v16M8 9h9M14 6l3 3-3 3M8 15h9M14 12l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-ripple" viewBox="0 0 24 24"><path d="M5 4v16M19 4v16M5 12h14M9 9l-3 3 3 3M15 9l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-razor" viewBox="0 0 24 24"><path d="M14.5 3.5l6 6-11 11-6-6zM6 15l3 3M11.5 9.5l3 3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-slip" viewBox="0 0 24 24"><path d="M2 12h20M6 8l-4 4 4 4M18 8l4 4-4 4M9 5v14M15 5v14" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 2l5 9-5 11-5-11zM12 11v3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V6a1.5 1.5 0 013 0v5M11 11V4.5a1.5 1.5 0 013 0V11M14 11V5.5a1.5 1.5 0 013 0V14c0 4-2.4 7-6 7-3 0-4.5-1.6-6.4-5.2L3.3 13a1.5 1.5 0 012.6-1.5L8 14" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-type" viewBox="0 0 24 24"><path d="M5 5h14M12 5v15M9 20h6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M14.5 14.5L20 20M7 10h6M10 7v6" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="currentColor"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z" fill="currentColor"/></symbol>
+  <symbol id="i-stepb" viewBox="0 0 24 24"><path d="M17 5v14l-9-7zM6 5v14" fill="currentColor" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-stepf" viewBox="0 0 24 24"><path d="M7 5v14l9-7zM18 5v14" fill="currentColor" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><path d="M14 4H9v16h5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M10 4h5v16h-5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-goin" viewBox="0 0 24 24"><path d="M4 5v14M20 5v14l-10-7z" fill="currentColor" stroke="currentColor" stroke-width="1.5"/><path d="M7 5h2M7 19h2" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-goout" viewBox="0 0 24 24"><path d="M20 5v14M4 5v14l10-7z" fill="currentColor" stroke="currentColor" stroke-width="1.5"/><path d="M15 5h2M15 19h2" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-marker" viewBox="0 0 24 24"><path d="M7 3h10v11l-5 6-5-6z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-insert" viewBox="0 0 24 24"><path d="M3 15h7v5H3zM14 15h7v5h-7zM12 3v9M8.5 8.5L12 12l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-overwrite" viewBox="0 0 24 24"><path d="M3 15h18v5H3z" fill="currentColor" opacity=".55"/><path d="M3 15h18v5H3zM12 3v9M8.5 8.5L12 12l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-lift" viewBox="0 0 24 24"><path d="M3 15h18v5H3zM12 12V3M8.5 6.5L12 3l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-extract" viewBox="0 0 24 24"><path d="M3 15h6v5H3zM15 15h6v5h-6zM12 12V3M8.5 6.5L12 3l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13" r="3.6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 015 5L21 13l-2 2-1.6-1.4a4 4 0 01-5-5L4 17v3h3l8.4-8.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3" fill="currentColor"/></symbol>
+  <symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12zM4 4l16 16" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 017 0v3" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-unlock" viewBox="0 0 24 24"><path d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 016.8-1.2" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-snap" viewBox="0 0 24 24"><path d="M5 3h5v8a2 2 0 004 0V3h5v8a7 7 0 01-14 0z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 7h5M14 7h5" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.6 0l3.2-3.2a4 4 0 00-5.6-5.6L12 6.4M14 10a4 4 0 00-5.6 0l-3.2 3.2a4 4 0 005.6 5.6l1.2-1.2" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-fx" viewBox="0 0 24 24"><text x="3" y="17" font-size="13" font-style="italic" font-weight="700" font-family="Georgia,serif" fill="currentColor">fx</text></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 6h16M9 6V4h6v2M6 6l1 14h10l1-14M10 10v7M14 10v7" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v11H3z" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-new" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM12 10v7M8.5 13.5h7" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M6 9v11h12V9" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M9 4a3 3 0 016 0v7a3 3 0 01-6 0zM5 11a7 7 0 0014 0M12 18v3" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 9a4 4 0 010 6M18.5 6.5a7.5 7.5 0 010 11" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-loop" viewBox="0 0 24 24"><path d="M4 12a6 6 0 016-6h8M15 3l3 3-3 3M20 12a6 6 0 01-6 6H6M9 21l-3-3 3-3" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><path d="M3 4h18v16H3zM7 4v16M17 4v16M3 8h4M3 12h4M3 16h4M17 8h4M17 12h4M17 16h4" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="6.5" cy="18" r="2.5" fill="currentColor"/><circle cx="17.5" cy="16" r="2.5" fill="currentColor"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><path d="M3 4h18v16H3z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 17l5-5 4 4 3-3 6 6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="8.5" r="1.8" fill="currentColor"/></symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 7L4 12l5 5M4 12h11a5 5 0 010 10h-2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-redo" viewBox="0 0 24 24"><path d="M15 7l5 5-5 5M20 12H9a5 5 0 000 10h2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-export" viewBox="0 0 24 24"><path d="M12 15V3M7.5 7.5L12 3l4.5 4.5M4 13v8h16v-8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-import" viewBox="0 0 24 24"><path d="M12 3v12M7.5 10.5L12 15l4.5-4.5M4 13v8h16v-8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 108-8H8M10 1L7 4l3 3" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-stopwatch" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 13V9M10 2h4M18.5 6l1.5-1.5" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-diamond" viewBox="0 0 24 24"><path d="M12 4l8 8-8 8-8-8z" fill="currentColor"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-chevl" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.8" fill="currentColor"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/><circle cx="19" cy="12" r="1.8" fill="currentColor"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 8h8M12 8v9" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-color" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.5a8.5 8.5 0 010 17z" fill="currentColor"/></symbol>
+  <symbol id="i-adjust" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10M7 12h10M7 15h6" stroke="currentColor" stroke-width="1.4"/></symbol>
+  <symbol id="i-dropper" viewBox="0 0 24 24"><path d="M15 4l5 5-2 2-1-1-8 8H6v-3l8-8-1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-fullscreen" viewBox="0 0 24 24"><path d="M3 9V3h6M15 3h6v6M21 15v6h-6M9 21H3v-6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-transition" viewBox="0 0 24 24"><path d="M3 5h10v14H3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 5h10v14H11z" fill="currentColor" opacity=".5"/></symbol>
+</svg>
+
+<div id="app">
+  <!-- ===== Header ===== -->
+  <header id="header">
+    <div class="hdr-left">
+      <img class="logo" src="logo.png" alt="" title="TopaZ Editing Pro 26">
+      <nav id="menubar"></nav>
+    </div>
+    <div class="hdr-center">
+      <button class="hdr-home" id="btnHome" title="Ekran startowy"><svg class="ic"><use href="#i-home"/></svg></button>
+      <div class="ws-tabs">
+        <button data-ws="import">Importuj</button>
+        <button data-ws="edit" class="active">Edycja</button>
+        <button data-ws="export">Eksportuj</button>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <select id="wsSelect" class="ws-select" title="Obszar roboczy"><option value="edit">Edycja</option><option value="color">Kolor</option><option value="effects">Efekty</option><option value="audio">Audio</option><option value="graphics">Grafika</option></select>
+      <div id="projTitle">Bez tytułu</div>
+      <button class="hdr-btn" id="btnPrefs" title="Preferencje (Ctrl+,)"><svg class="ic"><use href="#i-gear"/></svg></button>
+      <button class="hdr-btn" id="btnQuickExport" title="Szybki eksport"><svg class="ic"><use href="#i-export"/></svg></button>
+    </div>
+  </header>
+
+  <!-- ===== Edit workspace ===== -->
+  <main id="ws-edit" class="workspace active">
+    <section class="panel" id="pLeftTop">
+      <div class="ptabs" data-group="lefttop">
+        <button data-tab="source" class="active">Źródło: <span id="srcName">(brak klipów)</span></button>
+        <button data-tab="ecp">Elementy sterujące efektami</button>
+        <button data-tab="scopes">Zakresy Lumetri</button>
+        <button data-tab="mixer">Mikser ścieżek audio</button>
+      </div>
+      <div class="pbody">
+        <div class="tabpage active" data-page="source" id="sourcePage">
+          <div class="monitor" id="srcMonitor">
+            <div class="mon-view"><canvas id="srcCanvas" width="640" height="360"></canvas><div class="mon-empty" id="srcEmpty">Kliknij dwukrotnie klip w panelu Projekt,<br>aby otworzyć go w monitorze źródła</div></div>
+            <div class="mon-bar">
+              <span class="tc blue" id="srcTC">00:00:00:00</span>
+              <span class="spacer"></span>
+              <span class="tc" id="srcDur">00:00:00:00</span>
+            </div>
+            <div class="mon-scrub" id="srcScrub"><div class="inout" id="srcInOut"></div><div class="ph" id="srcPH"></div></div>
+            <div class="mon-transport">
+              <button data-src="mark-in" title="Zaznacz punkt wejścia (I)"><svg class="ic"><use href="#i-in"/></svg></button>
+              <button data-src="mark-out" title="Zaznacz punkt wyjścia (O)"><svg class="ic"><use href="#i-out"/></svg></button>
+              <span class="sep"></span>
+              <button data-src="go-in" title="Przejdź do wejścia"><svg class="ic"><use href="#i-goin"/></svg></button>
+              <button data-src="step-b" title="Krok wstecz"><svg class="ic"><use href="#i-stepb"/></svg></button>
+              <button data-src="play" class="play" title="Odtwórz/Zatrzymaj"><svg class="ic"><use href="#i-play"/></svg></button>
+              <button data-src="step-f" title="Krok naprzód"><svg class="ic"><use href="#i-stepf"/></svg></button>
+              <button data-src="go-out" title="Przejdź do wyjścia"><svg class="ic"><use href="#i-goout"/></svg></button>
+              <span class="sep"></span>
+              <button data-src="insert" title="Wstaw (,)"><svg class="ic"><use href="#i-insert"/></svg></button>
+              <button data-src="overwrite" title="Nadpisz (.)"><svg class="ic"><use href="#i-overwrite"/></svg></button>
+            </div>
+          </div>
+        </div>
+        <div class="tabpage" data-page="ecp" id="ecpPage"><div class="empty-note">Zaznacz klip na osi czasu, aby edytować efekty</div></div>
+        <div class="tabpage" data-page="scopes" id="scopesPage">
+          <div class="scopes-bar">
+            <select id="scopeMode"><option value="parade">Parada RGB</option><option value="waveform">Przebieg (luma)</option><option value="histogram">Histogram</option><option value="vector">Wektoroskop</option></select>
+          </div>
+          <canvas id="scopeCanvas" width="512" height="300"></canvas>
+        </div>
+        <div class="tabpage" data-page="mixer" id="mixerPage"></div>
+      </div>
+    </section>
+    <div class="gutter gv" id="gutterL"></div>
+
+    <section class="panel" id="pProgram">
+      <div class="ptabs"><button class="active">Program: <span id="seqNameTab">Sekwencja 01</span></button></div>
+      <div class="pbody">
+        <div class="monitor program" id="progMonitor">
+          <div class="mon-view" id="progView"><canvas id="progCanvas" width="1920" height="1080"></canvas><div id="progOverlay"></div><div class="perf-hud" id="perfHud"></div></div>
+          <div class="mon-bar">
+            <span class="tc blue" id="progTC" title="Kliknij, aby wpisać czas">00:00:00:00</span>
+            <select id="progZoom" title="Powiększenie"><option value="fit">Dopasuj</option><option value="0.25">25%</option><option value="0.5">50%</option><option value="0.75">75%</option><option value="1">100%</option></select>
+            <span class="spacer"></span>
+            <select id="progQuality" title="Rozdzielczość odtwarzania"><option value="auto">Auto</option><option value="1" selected>Pełna</option><option value="0.5">1/2</option><option value="0.25">1/4</option></select>
+            <button class="mini" id="progSettings" title="Ustawienia"><svg class="ic"><use href="#i-wrench"/></svg></button>
+            <span class="tc" id="progDur">00:00:00:00</span>
+          </div>
+          <div class="mon-scrub" id="progScrub"><div class="inout" id="progInOut"></div><div class="ph" id="progPH"></div></div>
+          <div class="mon-transport">
+            <button data-prog="marker" title="Dodaj znacznik (M)"><svg class="ic"><use href="#i-marker"/></svg></button>
+            <button data-prog="mark-in" title="Zaznacz wejście (I)"><svg class="ic"><use href="#i-in"/></svg></button>
+            <button data-prog="mark-out" title="Zaznacz wyjście (O)"><svg class="ic"><use href="#i-out"/></svg></button>
+            <span class="sep"></span>
+            <button data-prog="go-in" title="Przejdź do wejścia (Shift+I)"><svg class="ic"><use href="#i-goin"/></svg></button>
+            <button data-prog="step-b" title="Krok wstecz (←)"><svg class="ic"><use href="#i-stepb"/></svg></button>
+            <button data-prog="play" class="play" title="Odtwórz/Zatrzymaj (Spacja)"><svg class="ic"><use href="#i-play"/></svg></button>
+            <button data-prog="step-f" title="Krok naprzód (→)"><svg class="ic"><use href="#i-stepf"/></svg></button>
+            <button data-prog="go-out" title="Przejdź do wyjścia (Shift+O)"><svg class="ic"><use href="#i-goout"/></svg></button>
+            <span class="sep"></span>
+            <button data-prog="lift" title="Podnieś (;)"><svg class="ic"><use href="#i-lift"/></svg></button>
+            <button data-prog="extract" title="Wyodrębnij (')"><svg class="ic"><use href="#i-extract"/></svg></button>
+            <button data-prog="frame" title="Eksportuj klatkę (Ctrl+Shift+E)"><svg class="ic"><use href="#i-camera"/></svg></button>
+            <button data-prog="loop" title="Pętla odtwarzania"><svg class="ic"><use href="#i-loop"/></svg></button>
+            <button data-prog="fullscreen" title="Pełny ekran (`)"><svg class="ic"><use href="#i-fullscreen"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="gutter gv" id="gutterR"></div>
+
+    <section class="panel" id="pRight">
+      <div class="ptabs" data-group="right">
+        <button data-tab="props" class="active">Właściwości</button>
+        <button data-tab="lumetri">Kolor Lumetri</button>
+        <button data-tab="graphics">Grafika i tekst</button>
+      </div>
+      <div class="pbody">
+        <div class="tabpage active" data-page="props" id="propsPage"></div>
+        <div class="tabpage" data-page="lumetri" id="lumetriPage"></div>
+        <div class="tabpage" data-page="graphics" id="graphicsPage"></div>
+      </div>
+    </section>
+
+    <div class="gutter gh" id="gutterH"></div>
+
+    <section class="panel" id="pProject">
+      <div class="ptabs" data-group="project">
+        <button data-tab="project" class="active">Projekt: <span id="projTabName">Bez tytułu</span></button>
+        <button data-tab="effects">Efekty</button>
+        <button data-tab="history">Historia</button>
+        <button data-tab="info">Informacje</button>
+      </div>
+      <div class="pbody">
+        <div class="tabpage active" data-page="project" id="projectPage">
+          <div class="proj-top">
+            <div class="search"><svg class="ic"><use href="#i-search"/></svg><input id="projSearch" placeholder="Szukaj"></div>
+            <span class="proj-count" id="projCount">0 elementów</span>
+          </div>
+          <div class="proj-items grid" id="projItems"><div class="drop-hint" id="projDrop">Importuj multimedia, aby rozpocząć<br><small>Przeciągnij pliki tutaj lub kliknij dwukrotnie</small></div></div>
+          <div class="proj-bottom">
+            <button id="projList" title="Widok listy"><svg class="ic"><use href="#i-list"/></svg></button>
+            <button id="projGrid" class="on" title="Widok ikon"><svg class="ic"><use href="#i-grid"/></svg></button>
+            <input type="range" id="projThumbSize" min="80" max="220" value="130" title="Rozmiar miniatur">
+            <span class="spacer"></span>
+            <button id="projImport" title="Importuj (Ctrl+I)"><svg class="ic"><use href="#i-import"/></svg></button>
+            <button id="projNewItem" title="Nowy element"><svg class="ic"><use href="#i-new"/></svg></button>
+            <button id="projDelete" title="Usuń"><svg class="ic"><use href="#i-trash"/></svg></button>
+          </div>
+        </div>
+        <div class="tabpage" data-page="effects" id="effectsPage"></div>
+        <div class="tabpage" data-page="history" id="historyPage"></div>
+        <div class="tabpage" data-page="info" id="infoPage"></div>
+      </div>
+    </section>
+    <div class="gutter gv" id="gutterB"></div>
+
+    <section class="panel" id="pTimeline">
+      <div class="tools" id="tools">
+        <button data-tool="select" class="on" title="Narzędzie zaznaczania (V)"><svg class="ic"><use href="#i-select"/></svg></button>
+        <button data-tool="track" title="Zaznacz ścieżkę w przód (A)"><svg class="ic"><use href="#i-trackfwd"/></svg></button>
+        <button data-tool="ripple" title="Edycja z przesunięciem (B)"><svg class="ic"><use href="#i-ripple"/></svg></button>
+        <button data-tool="razor" title="Żyletka (C)"><svg class="ic"><use href="#i-razor"/></svg></button>
+        <button data-tool="slip" title="Poślizg (Y)"><svg class="ic"><use href="#i-slip"/></svg></button>
+        <button data-tool="pen" title="Pióro - klatki kluczowe krycia (P)"><svg class="ic"><use href="#i-pen"/></svg></button>
+        <button data-tool="hand" title="Rączka (H)"><svg class="ic"><use href="#i-hand"/></svg></button>
+        <button data-tool="zoom" title="Lupa (Z)"><svg class="ic"><use href="#i-zoom"/></svg></button>
+        <button data-tool="type" title="Tekst (T)"><svg class="ic"><use href="#i-type"/></svg></button>
+      </div>
+      <div class="tl-wrap">
+        <div class="ptabs"><button class="active"><span id="seqNameTL">Sekwencja 01</span></button></div>
+        <div class="tl-head">
+          <div class="tl-head-left">
+            <span class="tc blue big" id="tlTC">00:00:00:00</span>
+            <div class="tl-toggles">
+              <button id="tglNest" title="Wstaw jako zagnieżdżone" class="dim"><svg class="ic"><use href="#i-film"/></svg></button>
+              <button id="tglSnap" class="on" title="Przyciąganie (S)"><svg class="ic"><use href="#i-snap"/></svg></button>
+              <button id="tglLink" class="on" title="Zaznaczanie połączone"><svg class="ic"><use href="#i-link"/></svg></button>
+              <button id="tglMarker" title="Dodaj znacznik (M)"><svg class="ic"><use href="#i-marker"/></svg></button>
+              <button id="tglSettings" title="Ustawienia osi czasu"><svg class="ic"><use href="#i-wrench"/></svg></button>
+            </div>
+          </div>
+          <canvas id="tlRuler" height="34"></canvas>
+        </div>
+        <div class="tl-body" id="tlBody">
+          <div class="tl-headers" id="tlHeaders"></div>
+          <div class="tl-canvas-wrap" id="tlCanvasWrap"><canvas id="tlCanvas"></canvas></div>
+        </div>
+        <div class="tl-foot">
+          <div class="tl-foot-left">
+            <button id="tlAddV" title="Dodaj ścieżkę wideo">+V</button>
+            <button id="tlAddA" title="Dodaj ścieżkę audio">+A</button>
+          </div>
+          <div class="tl-hscroll" id="tlHScroll"><div class="thumb" id="tlHThumb"><i class="l"></i><i class="r"></i></div></div>
+        </div>
+      </div>
+      <div class="meters" id="meters">
+        <canvas id="meterCanvas" width="44" height="300"></canvas>
+        <div class="meter-labels"><span>S</span><span>S</span></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Import workspace ===== -->
+  <main id="ws-import" class="workspace">
+    <div class="imp-side">
+      <h3>Importuj</h3>
+      <button class="imp-src active" id="impFiles"><svg class="ic"><use href="#i-film"/></svg> Pliki multimedialne</button>
+      <button class="imp-src" id="impFolder"><svg class="ic"><use href="#i-folder"/></svg> Cały folder</button>
+      <button class="imp-src" id="impProject"><svg class="ic"><use href="#i-new"/></svg> Otwórz projekt</button>
+      <h4>Ostatnie projekty</h4>
+      <div id="recentList"></div>
+    </div>
+    <div class="imp-main">
+      <div class="imp-drop" id="impDrop">
+        <svg class="ic huge"><use href="#i-import"/></svg>
+        <h2>Przeciągnij i upuść pliki wideo, audio lub obrazy</h2>
+        <p>MP4 · MOV · WEBM · MKV · MP3 · WAV · M4A · FLAC · PNG · JPG · GIF</p>
+        <div class="imp-actions">
+          <button class="btn primary" id="impBrowse">Przeglądaj pliki…</button>
+        </div>
+        <label class="chk"><input type="checkbox" id="impAutoSeq" checked> Utwórz sekwencję z zaimportowanych klipów</label>
+      </div>
+      <div class="imp-recent-media" id="impMediaList"></div>
+    </div>
+  </main>
+
+  <!-- ===== Export workspace ===== -->
+  <main id="ws-export" class="workspace">
+    <div class="exp-settings" id="expSettings"></div>
+    <div class="exp-preview">
+      <div class="exp-canvas-wrap"><canvas id="expPreviewCanvas" width="960" height="540"></canvas></div>
+      <div class="exp-scrub"><input type="range" id="expScrub" min="0" max="1000" value="0"><span class="tc" id="expTC">00:00:00:00</span></div>
+      <div class="exp-summary" id="expSummary"></div>
+      <div class="exp-actions"><button class="btn" id="expBack">Anuluj</button><button class="btn primary big" id="expGo">Eksportuj</button></div>
+    </div>
+  </main>
+
+  <footer id="status"><span id="statusText">Gotowy</span><span class="spacer"></span><span id="statusInfo"></span></footer>
+</div>
+
+<!-- Start screen -->
+<div id="startScreen" class="overlay">
+  <div class="start-card">
+    <div class="start-left">
+      <img class="start-logo" src="logo.png" alt="">
+      <h1>TopaZ Editing Pro <b>26</b></h1>
+      <p class="muted">Profesjonalny nieliniowy edytor wideo</p>
+      <div class="start-btns">
+        <button class="btn primary" id="stNew">Nowy projekt</button>
+        <button class="btn" id="stOpen">Otwórz projekt…</button>
+        <button class="btn" id="stImport">Importuj multimedia…</button>
+      </div>
+    </div>
+    <div class="start-right">
+      <h3>Ostatnie projekty</h3>
+      <div id="startRecent"></div>
+      <h3 class="mt">Skróty</h3>
+      <div class="shortcut-grid">
+        <span>Spacja</span><span>Odtwórz / pauza</span>
+        <span>J K L</span><span>Przewijanie</span>
+        <span>V / C</span><span>Zaznaczanie / Żyletka</span>
+        <span>Ctrl+K</span><span>Przytnij w miejscu głowicy</span>
+        <span>Ctrl+D</span><span>Domyślne przejście</span>
+        <span>Ctrl+M</span><span>Eksport</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modalRoot"></div>
+<div id="ctxMenu" class="ctx-menu"></div>
+<div id="toast"></div>
+<div id="dragGhost"></div>
+
+<script src="js/core.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/render.js"></script>
+<script src="js/mp4.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/panels.js"></script>
+<script src="js/export.js"></script>
+<script src="js/prefs.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

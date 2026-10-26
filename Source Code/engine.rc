@@ -1,0 +1,24 @@
+#include <winver.h>
+1 ICON "../../branding/logo_editing.ico"
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 26,1,0,0
+PRODUCTVERSION 26,1,0,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "041504B0"
+    BEGIN
+      VALUE "CompanyName", "TopaZ"
+      VALUE "FileDescription", "TopaZ Media Engine"
+      VALUE "FileVersion", "26.1.0"
+      VALUE "ProductName", "TopaZ Editing Pro 26"
+      VALUE "ProductVersion", "26.1.0"
+      VALUE "OriginalFilename", "TopazMediaEngine.exe"
+      VALUE "LegalCopyright", "(c) 2026 TopaZ"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0415, 1200
+  END
+END

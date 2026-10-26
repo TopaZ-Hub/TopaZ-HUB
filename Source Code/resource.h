@@ -1,0 +1,2 @@
+#define IDR_LOGO_HUB 101
+#define IDR_LOGO_ED 102
