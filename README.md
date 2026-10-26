@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/TopaZ-Hub/TopaZ-HUB/raw/main/TopaZ_Creative_Hub_Setup.exe"><b>⬇️ Pobierz TopaZ Creative Hub</b></a>
+  <a href="https://github.com/TopaZ-Hub/TopaZ-HUB/releases/download/TopaZ-Creative-Hub-V1/TopaZ_Creative_Hub_Setup.exe"><b>⬇️ Pobierz TopaZ Creative Hub</b></a>
 </p>
 
 ---
