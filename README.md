@@ -6,11 +6,11 @@
 
 <p align="center">
   Jedno miejsce do instalowania i aktualizowania programów TopaZ.<br>
-  <b>Windows 10 / 11 (64-bit)</b> · wersja 26.1 · ok. 1 MB
+  <b>Windows 10 / 11 (64-bit)</b> · wersja 26.2 · ok. 1 MB
 </p>
 
 <p align="center">
-  <a href="https://github.com/TopaZ-Hub/TopaZ-HUB/releases/download/TopaZ-Creative-Hub-V1/TopaZ_Creative_Hub_Setup.exe"><b>⬇️ Pobierz TopaZ Creative Hub</b></a>
+  <a href="https://github.com/TopaZ-Hub/TopaZ-HUB/raw/main/TopaZ_Creative_Hub_Setup.exe"><b>⬇️ Pobierz TopaZ Creative Hub</b></a>
 </p>
 
 ---
@@ -24,6 +24,7 @@ Obecnie dostępne:
 | Program | Opis |
 |---|---|
 | **TopaZ Editing Pro 26** | Edytor wideo w stylu Premiere Pro: oś czasu, 90+ efektów GPU, 30+ przejść, korekcja kolorów Lumetri i szybki eksport sprzętowy H.264 / H.265 / AV1 do 4K i 8K |
+| **TopaZ Effects 26** | Animacja i efekty wizualne w stylu After Effects: warstwy 3D, kamery, wyrażenia, maski, track matte, wtyczki i Dynamic Link z Editing |
 
 ## Instalacja krok po kroku
 
@@ -34,7 +35,7 @@ Obecnie dostępne:
 
    Skąd to okno, wyjaśniam w sekcji niżej.
 3. Przejdź przez instalator: **Dalej → Akceptuję → Zainstaluj**. Uprawnienia administratora nie są potrzebne.
-4. W Hubie kliknij **„Zainstaluj”** przy TopaZ Editing Pro 26.
+4. W Hubie kliknij **„Zainstaluj”** przy programie, który chcesz (TopaZ Editing Pro 26 lub TopaZ Effects 26).
 5. Gotowe. O nowych wersjach Hub powiadomi Cię sam, a aktualizację instalujesz jednym kliknięciem.
 
 ## ⚠️ Dlaczego Windows pokazuje czerwone ostrzeżenie?
@@ -63,7 +64,7 @@ Get-FileHash .\TopaZ_Creative_Hub_Setup.exe -Algorithm SHA256
 Wynik musi być taki sam jak ten:
 
 ```
-BA7600EA5FC9A8B990360357678342F1C7056AE3D02DF9BAD1A87427E38BBE1A
+1C02E62398F9D7EAB69F915FFF09B838A736FB8C0922C38E906E633DB40DF5AC
 ```
 
 ### 3. Co program robi na komputerze
